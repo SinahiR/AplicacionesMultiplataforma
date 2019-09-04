@@ -1,0 +1,115 @@
+		
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<title>Actividad de diagnostico</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width  initial-scale=1.0">
+		</head>
+		<body>
+		<div align="center">
+		<h3> Bienvenido </h3>
+		<h5>Ingrese el numero:</h5>
+		<input type="number" name="n" size="25" id="Pedir">
+		<button  id="boton" onclick="crear()">Generar</button>
+		<br>
+		<br>
+		<br>
+		</div>
+
+		<div width="300" align="center">
+		<div >
+		<table class="titulo">
+		<tr>
+		    
+			<td width="90">Numero</td> 
+			<td width="90">Calculo</td>
+			<td width="90">Resultado</td>
+
+		</tr>
+		</table>
+		</div>
+
+
+		<style type="text/css">
+			
+
+			
+			.titulo
+			{
+				border: 5px;
+				background: #000000;
+				color: #ffffff;
+				
+			}
+			
+
+
+			.direccion
+			{
+				text-align: center;
+			}
+
+			.direccion2
+			{
+				text-align: left;
+			}
+
+			.direccion3
+			{
+				text-align: right;
+			}
+
+
+		.numeros
+		{
+			
+			width: 250px;
+		}
+		
+			
+
+
+	
+		</style>
+
+	<div id="resultado"  >
+
+		<script>
+			function crear()
+			{
+				var col=3;
+				var filas=parseInt(document.getElementById("Pedir").value);
+				var tabla="<table class =\"numeros\">";
+				var suma=0;
+				var suma1='1';
+				var suma2=1;
+
+
+		for(i=1;i<=filas;i++){ 
+
+			//td columnas
+			//tr filas
+			
+		    tabla+="<tr >";
+
+		    suma+=(i);
+		    tabla+="<td class =\"direccion\">"+suma+ "</td>";//numero
+		   
+
+		    suma1+='x'+(i);
+		    tabla+="<td class =\"direccion2\"> "+suma1+" </td>";//calculo
+		  
+		    suma2=suma2*i;
+		    tabla+="<td class =\"direccion3\">"+suma2+"</td>";//resultado
+		    
+		    tabla+="</tr>";
+		}
+		tabla+="</table>";
+		document.getElementById("resultado").innerHTML=tabla;
+		}	
+		</script>
+	</div>
+	</div>
+
+		</body>
